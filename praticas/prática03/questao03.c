@@ -6,10 +6,10 @@
 
 int main() {
   int raio = 10;
- float const_pi = 3.1416;
-  float perimetro = 2*raio*const_pi;
+  const float PI = 3.1416f;
+  float perimetro = 2*raio*PI;
 
-    printf("O perímetro da pizza é %f\n", perimetro);
+    printf("O perímetro da pizza é %f cm\n", perimetro);
 
   return 0; 
   
