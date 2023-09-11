@@ -5,14 +5,19 @@
 #include <stdio.h>
 
 int main() {
-  int produto = 100.00;
-  int n1 = 1;
-  float ICMS = 0.17;
-  float COFINS = 0.076;
-  float PIS_PASEP = 0.0165;
-  float preço_final = n1+ICMS*produto+COFINS*produto+PIS_PASEP*produto;
+  float preco_inicial = 100.0f;
+  
+  float valor_ICMS = preco_inicial * 0.17f;
+  float valor_COFINS = preco_inicial * 0.076f;
+  float valor_PISPASEP = preco_inicial * 0.0165f;
+  
+  float preço_final = (1 + 0.17f + 0.076f + 0.0165f) * preco_inicial;
 
-  printf("O preço final é %f\n", preço_final);
+  printf("O preço inicial é %f\n", preco_inicial);
+  printf("O valor ICMS é %f\n"), valor_ICMS);
+  printf("O valor COFINS é %f\n"), valor_COFINS);
+  printf("O valor PIS_PASEB é %f\n"), valor_PISPASEP);
+  printf("O preço final é %f\n", preco_final);
 
   return 0;
   
